@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  @apply bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-50 transition-colors duration-300;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-grace-500 dark:bg-grace-600 rounded-full hover:bg-grace-600 dark:hover:bg-grace-500;
+}
+
+/* Cross decoration */
+.cross-decoration {
+  @apply before:content-['✝'] before:absolute before:text-4xl before:opacity-10;
+}
+
+/* Hymn text styling */
+.hymn-text {
+  @apply leading-relaxed text-lg text-gray-700 dark:text-gray-300 font-serif;
+}
