@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { useSongStore } from '@/store/songStore';
-import { useNavigate } from 'react-router-dom';
 import { Plus, Trash2, Edit2, Users, Music, Settings } from 'lucide-react';
-import { v4 as uuidv4 } from 'crypto';
+import { Language } from '@/types';
 
 export default function Admin() {
-  const navigate = useNavigate();
   const { currentUser, songs, addSong, deleteSong, updateSong } = useSongStore();
   const [activeTab, setActiveTab] = useState<'songs' | 'users' | 'settings'>('songs');
   const [showNewSong, setShowNewSong] = useState(false);
@@ -14,7 +12,7 @@ export default function Admin() {
   const [formData, setFormData] = useState({
     title: '',
     artist: '',
-    language: 'english' as const,
+    language: 'english' as Language,
     lyrics: '',
     chords: '',
     youtubeUrl: '',
@@ -43,7 +41,7 @@ export default function Admin() {
     } else {
       addSong({
         ...formData,
-        id: uuidv4(),
+        id: crypto.randomUUID(),
         views: 0,
         createdAt: new Date().toISOString(),
       });
@@ -154,7 +152,7 @@ export default function Admin() {
                     />
                     <select
                       value={formData.language}
-                      onChange={(e) => setFormData({ ...formData, language: e.target.value as any })}
+                      onChange={(e) => setFormData({ ...formData, language: e.target.value as Language })}
                       className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-grace-500"
                     >
                       <option value="english">English</option>

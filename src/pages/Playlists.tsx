@@ -2,10 +2,9 @@ import { useState } from 'react';
 import { useSongStore } from '@/store/songStore';
 import { ListMusic, Plus, Trash2, Edit2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { v4 as uuidv4 } from 'crypto';
 
 export default function Playlists() {
-  const { playlists, createPlaylist, deletePlaylist, updatePlaylist, currentUser } = useSongStore();
+  const { playlists, createPlaylist, deletePlaylist, currentUser } = useSongStore();
   const [showNewPlaylist, setShowNewPlaylist] = useState(false);
   const [newName, setNewName] = useState('');
   const [newDesc, setNewDesc] = useState('');
@@ -13,7 +12,7 @@ export default function Playlists() {
   const handleCreate = () => {
     if (newName.trim()) {
       createPlaylist({
-        id: uuidv4(),
+        id: crypto.randomUUID(),
         name: newName,
         description: newDesc,
         songs: [],
