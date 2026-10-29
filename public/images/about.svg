@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t">
+  <title id="t">Team collaborating around a table</title>
+  <rect width="600" height="420" fill="#e0e7ff"/>
+  <!-- wall art -->
+  <rect x="60" y="50" width="120" height="90" rx="10" fill="#c7d2fe"/>
+  <circle cx="120" cy="95" r="22" fill="#818cf8"/>
+  <!-- table -->
+  <rect x="120" y="260" width="360" height="22" rx="11" fill="#374151"/>
+  <rect x="290" y="282" width="20" height="90" fill="#374151"/>
+  <rect x="220" y="366" width="160" height="14" rx="7" fill="#374151"/>
+  <!-- laptop on table -->
+  <rect x="270" y="222" width="60" height="38" rx="4" fill="#1f2937"/>
+  <rect x="260" y="258" width="80" height="6" rx="3" fill="#111827"/>
+  <!-- people -->
+  <g>
+    <circle cx="160" cy="170" r="34" fill="#f59e0b"/>
+    <rect x="120" y="206" width="80" height="60" rx="30" fill="#4f46e5"/>
+  </g>
+  <g>
+    <circle cx="300" cy="150" r="38" fill="#fb7185"/>
+    <rect x="256" y="190" width="88" height="66" rx="32" fill="#0ea5e9"/>
+  </g>
+  <g>
+    <circle cx="440" cy="170" r="34" fill="#34d399"/>
+    <rect x="400" y="206" width="80" height="60" rx="30" fill="#6366f1"/>
+  </g>
+  <!-- plant -->
+  <rect x="520" y="300" width="40" height="50" rx="6" fill="#6366f1"/>
+  <ellipse cx="540" cy="290" rx="26" ry="30" fill="#34d399"/>
+</svg>
